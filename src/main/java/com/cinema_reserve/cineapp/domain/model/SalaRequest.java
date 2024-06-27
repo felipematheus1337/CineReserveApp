@@ -16,5 +16,4 @@ public class SalaRequest {
 
     private int capacidade;
 
-    private String tipoDeSala;
 }

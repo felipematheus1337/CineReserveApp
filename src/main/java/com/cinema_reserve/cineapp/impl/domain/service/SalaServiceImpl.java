@@ -19,8 +19,10 @@ public class SalaServiceImpl implements SalaService {
     @Override
     public SalaResponse criar(SalaRequest dto) {
 
+        SalaType salaType = dto.getCapacidade() > 80 ? SalaType.PLATINUM : SalaType.PREMIUM;
+
         var sala = Sala.builder()
-                .tipoDeSala(SalaType.valueOf(dto.getTipoDeSala()))
+                .tipoDeSala(salaType)
                 .nome(dto.getNomeFilme())
                 .capacidadeTotal(dto.getCapacidade())
                 .capacidadeAtual(dto.getCapacidade())
