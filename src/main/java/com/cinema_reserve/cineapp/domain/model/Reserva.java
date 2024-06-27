@@ -2,12 +2,18 @@ package com.cinema_reserve.cineapp.domain.model;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tb_reserva")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Reserva {
 
 
