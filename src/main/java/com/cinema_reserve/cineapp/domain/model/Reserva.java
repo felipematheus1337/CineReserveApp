@@ -3,8 +3,10 @@ package com.cinema_reserve.cineapp.domain.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
@@ -14,6 +16,7 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Reserva {
 
 
@@ -28,6 +31,7 @@ public class Reserva {
     private Sala sala;
 
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
+    @CreationTimestamp
     private LocalDateTime dataHora;
 
     private int numeroCadeira;

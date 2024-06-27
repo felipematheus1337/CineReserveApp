@@ -29,7 +29,7 @@ public class Sala {
 
     private int capacidadeAtual;
 
-    @OneToMany(mappedBy = "sala")
+    @OneToMany(mappedBy = "sala", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Reserva> reservas;
 
     private SalaType tipoDeSala;

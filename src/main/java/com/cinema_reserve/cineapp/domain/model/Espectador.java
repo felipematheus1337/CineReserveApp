@@ -30,6 +30,6 @@ public class Espectador {
     private String email;
 
 
-    @OneToMany(mappedBy = "espectador")
+    @OneToMany(mappedBy = "espectador", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Reserva> reservas;
 }
