@@ -30,4 +30,6 @@ public class Reserva {
     @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
     private LocalDateTime dataHora;
 
+    private int numeroCadeira;
+
 }

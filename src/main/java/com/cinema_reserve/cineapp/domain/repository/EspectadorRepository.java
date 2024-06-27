@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EspectadorRepository extends JpaRepository<Espectador, Long> {
+
+    boolean existsByEmailAndCpf(String email, String cpf);
 }
