@@ -25,7 +25,9 @@ public class Sala {
 
     private String nome;
 
-    private int capacidade;
+    private int capacidadeTotal = 80;
+
+    private int capacidadeAtual;
 
     @OneToMany(mappedBy = "sala")
     private List<Reserva> reservas;

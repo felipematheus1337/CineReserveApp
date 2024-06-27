@@ -22,11 +22,12 @@ public class SalaServiceImpl implements SalaService {
         var sala = Sala.builder()
                 .tipoDeSala(SalaType.valueOf(dto.getTipoDeSala()))
                 .nome(dto.getNomeFilme())
-                .capacidade(dto.getCapacidade())
+                .capacidadeTotal(dto.getCapacidade())
+                .capacidadeAtual(dto.getCapacidade())
                 .build();
 
        salaRepository.save(sala);
 
-        return new SalaResponse(sala.getNome(), sala.getCapacidade(), sala.getTipoDeSala().toString());
+        return new SalaResponse(sala.getNome(), sala.getCapacidadeTotal(), sala.getTipoDeSala().toString());
     }
 }
